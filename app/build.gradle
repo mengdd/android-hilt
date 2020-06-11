@@ -31,7 +31,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        testInstrumentationRunner "com.example.android.dagger.CustomTestRunner"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -67,4 +67,9 @@ dependencies {
     // Hilt dependencies
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    // Hilt testing dependency
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    // Make Hilt generate code in the androidTest folder
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
 }
