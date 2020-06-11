@@ -31,7 +31,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "com.example.android.dagger.CustomTestRunner"
+        testInstrumentationRunner "com.example.android.hilt.CustomTestRunner"
 
         javaCompileOptions {
             annotationProcessorOptions {
